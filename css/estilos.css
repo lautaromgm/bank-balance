@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 .limpiarEstilos::after {
@@ -196,6 +197,11 @@ body {
 .egreso {
   float: left;
   width: 370px;
+}
+@media only screen and (max-width: 780px) {
+  .egreso {
+    float: none;
+  }
 }
 
 h2 {
