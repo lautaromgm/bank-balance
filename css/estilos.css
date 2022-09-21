@@ -4,6 +4,42 @@
   box-sizing: border-box;
   max-width: 100vw;
 }
+.home-button {
+  max-width: calc(30px + 6vw);
+  height: auto;
+  position: absolute;
+  /* margin-bottom: 55vh; */
+  right: calc(130px + 32vh);
+  text-align: left;
+}
+@media (min-width: 740px) {
+  .home-button {
+    max-width: 74.39px;
+  }
+}
+@media (max-width: 310px) {
+  .home-button {
+    right: calc(50px + 32vh);
+  }
+}
+@media (max-width: 416px) and (min-width: 310px) {
+  .home-button {
+    right: calc(50px + 33vh);
+  }
+}
+@media (max-width: 416px) and (min-width: 320px) {
+  .home-button {
+    right: calc(50px + 35vh);
+  }
+}
+@media (max-width: 416px) and (min-width: 340px) {
+  .home-button {
+    right: calc(50px + 38vh);
+  }
+}
+.home-button:hover {
+  transform: scale(1.2);
+}
 
 .limpiarEstilos::after {
   content: "";
