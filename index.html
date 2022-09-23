@@ -20,23 +20,19 @@
           </div>
         </picture>
         <div class="presupuesto_titulo">Presupuesto Disponible</div>
-        <div class="presupuesto_valor" id="presupuesto">+2,000.00</div>
+        <div class="presupuesto_valor" id="presupuesto"></div>
         <div class="presupuesto_ingreso limpiarEstilos">
           <div class="presupuesto_ingreso--texto">Ingresos</div>
           <div class="derecha">
-            <div class="presupuesto_ingreso--valor" id="ingresos">
-              +4,000.00
-            </div>
+            <div class="presupuesto_ingreso--valor" id="ingresos"></div>
             <div class="presupuesto_ingreso--porcentaje"></div>
           </div>
         </div>
         <div class="presupuesto_egreso limpiarEstilos">
           <div class="presupuesto_egreso--texto">Egresos</div>
           <div class="derecha limpiarEstilos">
-            <div class="presupuesto_egreso--valor" id="egresos">-1,900.00</div>
-            <div class="presupuesto_egreso--porcentaje" id="porcentaje">
-              45%
-            </div>
+            <div class="presupuesto_egreso--valor" id="egresos"></div>
+            <div class="presupuesto_egreso--porcentaje" id="porcentaje"></div>
           </div>
         </div>
       </div>
@@ -68,15 +64,44 @@
         </div>
       </div>
     </form>
+    <form id="forma2" onsubmit="return false;">
+      <div class="agregar">
+        <div class="agregar_contenedor">
+          <select class="agregar_tipo tipo_tarifa" id="sel_tarifa">
+            <option value="anual" selected>Anual</option>
+            <option value="mensual">Mensual</option>
+          </select>
+          <span style="position: relative; left: 20px; font-size: small">%</span
+          ><input
+            type="number"
+            class="agregar_valor"
+            id="tarifa"
+            placeholder="Tarifa"
+            step="any"
+            style="padding-left: 24px"
+          />
+          <input
+            type="number"
+            class="agregar_valor"
+            id="tiempo"
+            placeholder="Meses"
+            step="any"
+          />
+          <button class="agregar_btn" onclick="calcularPlazo()">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </form>
 
     <div class="contenedor limpiarEstilos">
       <div class="ingreso">
         <h2 class="ingreso_titulo">Ingresos</h2>
         <div id="lista-ingresos">
           <div class="elemento limpiarEstilos">
-            <div class="elemento_descripcion">Salario</div>
+            <div class="elemento_descripcion"></div>
             <div class="derecha limpiarEstilos">
-              <div class="elemento_valor">+2,200.00</div>
+              <div class="elemento_valor"></div>
               <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
                   <ion-icon name="close-circle-outline"></ion-icon>
@@ -85,9 +110,9 @@
             </div>
           </div>
           <div class="elemento limpiarEstilos">
-            <div class="elemento_descripcion">Venta coche</div>
+            <div class="elemento_descripcion"></div>
             <div class="derecha limpiarEstilos">
-              <div class="elemento_valor">+1,500.00</div>
+              <div class="elemento_valor"></div>
               <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
                   <ion-icon name="close-circle-outline"></ion-icon>
@@ -101,10 +126,10 @@
         <h2 class="egreso_titulo">Egresos</h2>
         <div id="lista-egresos">
           <div class="elemento limpiarEstilos">
-            <div class="elemento_descripcion">Renta departamento</div>
+            <div class="elemento_descripcion"></div>
             <div class="derecha limpiarEstilos">
-              <div class="elemento_valor">-900.00</div>
-              <div class="elemento_porcentaje">21%</div>
+              <div class="elemento_valor"></div>
+              <div class="elemento_porcentaje"></div>
               <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
                   <ion-icon name="close-circle-outline"></ion-icon>
@@ -113,10 +138,10 @@
             </div>
           </div>
           <div class="elemento limpiarEstilos">
-            <div class="elemento_descripcion">Ropa</div>
+            <div class="elemento_descripcion"></div>
             <div class="derecha limpiarEstilos">
-              <div class="elemento_valor">-400.00</div>
-              <div class="elemento_porcentaje">10%</div>
+              <div class="elemento_valor"></div>
+              <div class="elemento_porcentaje"></div>
               <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
                   <ion-icon name="close-circle-outline"></ion-icon>

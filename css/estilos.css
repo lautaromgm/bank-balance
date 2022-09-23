@@ -171,6 +171,9 @@ body {
   font-weight: 300;
   transition: border 0.3s;
 }
+.tipo_tarifa {
+  width: 100px;
+}
 
 .agregar_descripcion,
 .agregar_valor {
