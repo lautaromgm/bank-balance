@@ -155,16 +155,16 @@ let calcularPlazo = () => {
   let selTarifa = forma2["sel_tarifa"].value;
   let tarifa = forma2["tarifa"].value;
   let tiempo = forma2["tiempo"].value;
-  let presupuestoActual = totalIngresos() - totalEgresos();
+  let importe = forma2["importe"].value;
   if (selTarifa === "anual") {
     if (tiempo == 12) {
-      resultado = presupuestoActual * (tarifa / 100);
+      resultado = importe * (tarifa / 100);
       console.log(tarifa);
       ingresos.push(new Ingreso("Renta por plazo fijo", resultado));
       cargarCabecero();
       cargarIngresos();
     } else {
-      resultado = presupuestoActual * (((tarifa / 100) * (tiempo * 30)) / 365);
+      resultado = importe * (((tarifa / 100) * (tiempo * 30)) / 365);
 
       console.log(tarifa);
       ingresos.push(new Ingreso("Renta por plazo fijo", resultado));
