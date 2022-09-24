@@ -156,27 +156,32 @@ let calcularPlazo = () => {
   let tarifa = forma2["tarifa"].value;
   let tiempo = forma2["tiempo"].value;
   let importe = forma2["importe"].value;
-  if (selTarifa === "anual") {
-    if (tiempo == 12) {
-      resultado = importe * (tarifa / 100);
-      console.log(tarifa);
-      ingresos.push(new Ingreso("Renta por plazo fijo", resultado));
-      cargarCabecero();
-      cargarIngresos();
-    } else {
-      resultado = importe * (((tarifa / 100) * (tiempo * 30)) / 365);
+  let presupuestoActual = totalIngresos() - totalEgresos();
+  if (importe <= presupuestoActual) {
+    if (selTarifa === "anual") {
+      if (tiempo == 12) {
+        resultado = importe * (tarifa / 100);
+        console.log(tarifa);
+        ingresos.push(new Ingreso("Renta por plazo fijo", resultado));
+        cargarCabecero();
+        cargarIngresos();
+      } else {
+        resultado = importe * (((tarifa / 100) * (tiempo * 30)) / 365);
 
+        console.log(tarifa);
+        ingresos.push(new Ingreso("Renta por plazo fijo", resultado));
+        cargarCabecero();
+        cargarIngresos();
+      }
+    }
+    if (selTarifa === "mensual") {
+      resultado = importe * ((tarifa / 100) * tiempo);
       console.log(tarifa);
       ingresos.push(new Ingreso("Renta por plazo fijo", resultado));
       cargarCabecero();
       cargarIngresos();
     }
-  }
-  if (selTarifa === "mensual") {
-    resultado = presupuestoActual * ((tarifa / 100) * tiempo);
-    console.log(tarifa);
-    ingresos.push(new Ingreso("Renta por plazo fijo", resultado));
-    cargarCabecero();
-    cargarIngresos();
+  } else {
+    alert("Importe superior al presupuesto");
   }
 };
